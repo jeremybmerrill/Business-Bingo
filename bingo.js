@@ -43,7 +43,6 @@ $(document).ready(function() {
   /* if you get bingo */
   function hazBingo(){
     if ( $('#a0').hasClass('bingoed') && $('#a1').hasClass('bingoed') && $('#a2').hasClass('bingoed') && $('#a3').hasClass('bingoed') && $('#a4').hasClass('bingoed') ){
-      alert("afdsasdf");
       window.location = "yougotbingo.php";
     }
     if ($('#a5').hasClass('bingoed') && $('#a6').hasClass('bingoed') && $('#a7').hasClass('bingoed') && $('#a8').hasClass('bingoed') && $('#a9').hasClass('bingoed')){
@@ -79,6 +78,19 @@ $(document).ready(function() {
     if ($('#a4').hasClass('bingoed') && $('#a8').hasClass('bingoed') && $('#a12').hasClass('bingoed') && $('#a16').hasClass('bingoed') && $('#a20').hasClass('bingoed')){
       window.location = "yougotbingo.php";
     }
+  }
+
+  function getifyWords(){
+    var getstring = "?words=";
+    var bingoed = $('.bingoed');
+    for (elem in bingoed){
+      var my_text = $(elem).text();
+      my_text = my_text.replace(" ", "+");
+      if(my_text != ""){
+        getstring = getstring + my_text + ";";
+      }
+    }
+    return getstring;
   }
 });
 
