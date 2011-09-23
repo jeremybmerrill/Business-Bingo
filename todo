@@ -1,0 +1,5 @@
+database stuff
+  put which boxes were selected in get/post to yougotbingo.php
+
+session
+  store a unique ID for each bingo board.
