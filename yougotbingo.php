@@ -19,6 +19,7 @@
 	  <body>
 		  <a href="https://github.com/jeremybmerrill/Business-Bingo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/github.png" alt="Fork me on GitHub"></a>
 		  <center>
+        <h1>Bingo!</h1>
 			  <?php echo $loc->Translate("INDEX_WELCOME_MSG_1"); ?>
 			  <br /><br />
 			  <form action="twittersubmit.php" method="POST"> 
@@ -28,7 +29,7 @@
 				  <input type="text" id="lang" name="sessionhashtag" maxlength="25" value="#ONA11">
 				  <input type="submit" value="<?php echo $loc->Translate("INDEX_SUBMIT_BUTTON"); ?>">
 			  </form>
-			  <?php echo $loc->Translate("INDEX_AUTHORS"); ?>
+			  <span id="authors"><?php echo $loc->Translate("INDEX_AUTHORS"); ?></span>
 			  <br />
 			  <?php echo $loc->Translate("INDEX_DISCLAIMER"); ?>
 			  <br />
