@@ -1,6 +1,6 @@
 <?php
 $consumerKey    = '8jp7xABzIsLQkZ07OzImA';
-$consumerSecret = 'h4SCneNGEfLLn8oTn3m62chmnAdgf3x2xTeLFAHw';
+$consumerSecret = '';
 $oAuthToken     = '378594590-uU9igS21ORUtPeeJiQixlKu6k3gcflOA4DSCHAxf';
 $oAuthSecret    = '';
 
