@@ -29,15 +29,16 @@
 					  if(($i % 5)==0) echo "</tr><tr>";
 					  if($i==12)
 					  {
-						  echo "<td id='a" . $i .  "' width='100px' height='100px' align='center'><img src='images/ona11.png' width='70px' height='70px' align='center'></td>";
+						  echo "<td id='a" . $i .  "' class='bingotile' align='center'><img src='images/ona11.png' width='70px' height='70px' align='center'></td>";
               $bingoboard[] = "";
 					  }else{
               $my_word = $words[$random[$i]];
-						  echo "<td id='a" . $i .  "' width='100px' height='100px' align='center'>" . $my_word . "</td>";
-              $bingoboard[] = my_word;
+						  echo "<td id='a" . $i .  "' class='bingotile' align='center'>" . $my_word . "</td>";
+              $bingoboard[] = $my_word;
 					  }
 				  }
 				  echo "</tr>";
+          setcookie('bingoboard', serialize($bingoboard));
       }else{
         $bingoboard = unserialize($_COOKIE['bingoboard']);
 			  /*$words = $loc->Translate("WORDS_ARRAY"); 
@@ -50,10 +51,10 @@
 					  if(($i % 5)==0) echo "</tr><tr>";
 					  if($i==12)
 					  {
-						  echo "<td id='a" . $i .  "' width='100px' height='100px' align='center'><img src='images/ona11.png' width='70px' height='70px' align='center'></td>";
+						  echo "<td id='a" . $i .  "' class='bingotile' align='center'><img src='images/ona11.png' width='70px' height='70px' align='center'></td>";
 					  }else{
               $my_word = $bingoboard[$i];
-						  echo "<td id='a" . $i .  "' width='100px' height='100px' align='center'>" . $my_word . "</td>";
+						  echo "<td id='a" . $i .  "' class='bingotile' align='center'>" . $my_word . "</td>";
 					  }
 				  }
 				  echo "</tr>";        
@@ -65,6 +66,5 @@
 			<br>
 			<?php echo $loc->Translate("CARD_WELCOME_MSG_1") . "<b> " . $tester . "</b>! " . $loc->Translate("CARD_WELCOME_MSG_2") ?>
 		</center>
-    <?php setcookie('bingoboard', serialize(bingoboard)); ?>
 	</body>
 </html>

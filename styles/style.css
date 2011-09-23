@@ -42,3 +42,8 @@ table td {
 table td.bingoed{
 	background-color: #ff0066;
 }
+
+.bingotile{
+  width: 100px;
+  height: 100px;
+}
