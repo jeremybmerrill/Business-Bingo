@@ -2,7 +2,7 @@
 $consumerKey    = '8jp7xABzIsLQkZ07OzImA';
 $consumerSecret = 'h4SCneNGEfLLn8oTn3m62chmnAdgf3x2xTeLFAHw';
 $oAuthToken     = '378594590-sMUJfCrldLeyOcEipIya3m4YtJLsCBbxE8V5NTh4';
-$oAuthSecret    = 'sNV4jDitjU1ntCWB99PnTpyHd9x4Y48z3WxAwTOJQ4';
+$oAuthSecret    = '';
 
 $username = $_POST['twitter'];
 $hashtag = $_POST['sessionhashtag'];
