@@ -2,10 +2,9 @@
 
 $WORDS_ARRAY = array(
 	"Engagement",
-	"Web 2.0",
 	"Gamification",
 	"Monetization",
-	"Responsive Design",
+	//"Responsive Design",
 	"Multimedia",
 	"Online Journalist",
 	"Consuming News",
@@ -36,7 +35,7 @@ $WORDS_ARRAY = array(
   "I'm sorry, I switched out of journalism and now I do PR.",
   "Distribution",
   "Content",
-  "I can haz",
+  //"I can haz",
   "Transparent",
   "Launch",
 );
@@ -46,6 +45,7 @@ $INDEX_PAGE_TITLE = "#ONA11 Buzzword Bingo!";
 $INDEX_WELCOME_MSG_1 = "Thanks for playing the first annual ONA Bingo -- developed exclusively for journalists who see through the BS!";
 $INDEX_WELCOME_MSG_2 = "Twitter handle:";
 $INDEX_WELCOME_MSG_3 = "Session hashtag (or name):";
+$INDEX_WELCOME_MSG_3 = "Who are you? Which session were you attending?";
 $INDEX_SUBMIT_BUTTON = "Tweet at me, bro!";
 $INDEX_AUTHORS = "This game was built by the innovative, collaborative trio of <a href='http://twitter.com/danielsircar'>Daniel Sircar</a>'s concept, <a href='http://twitter.com/kzhu91'>Katie Zhu</a>'s design and <a href='http://twitter.com/jeremybmerrill'>Jeremy B. Merrill</a>'s programming for the <a href='http://ona11.journalists.org/student-newsroom'>ONA11 Student Newsroom</a>. <br /><br /> It is based on Software Tester Business Bingo by <a href='http://twitter.com/#/knorrium' target='_BLANK'>@knorrium</a> with the help of <a href='http://twitter.com/#/camiloribeiro' target='_BLANK'>@camiloribeiro</a>,  <a href='http://twitter.com/#/eliasnogueira' target='_BLANK'>@eliasnogueira</a> and <a href='http://twitter.com/#/FabricioFFC' target='_BLANK'>@FabricioFFC</a>.";
 $INDEX_DISCLAIMER = "Journalism works best when it's jargon-free. :)";

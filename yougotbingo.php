@@ -24,6 +24,7 @@
         <h1>Bingo!</h1>
 			  <?php echo $loc->Translate("INDEX_WELCOME_MSG_1"); ?>
 			  <br /><br />
+        <?php echo $loc->Translate("INDEX_WELCOME_MSG_4"); ?>
 			  <form action="twittersubmit.php" method="POST"> 
 			  <?php echo $loc->Translate("INDEX_WELCOME_MSG_2"); ?>
 				  <input type="text" id="twitter" name="twitter" maxlength="25" value="@twitterhandle"/><br />
@@ -31,6 +32,10 @@
 				  <input type="text" id="lang" name="sessionhashtag" maxlength="25" value="#ONA11"><br />
 				  <input type="submit" value="<?php echo $loc->Translate("INDEX_SUBMIT_BUTTON"); ?>">
 			  </form>
+        <div id="youtube" style="text-align: center;" ><iframe width="560" height="315" src="http://www.youtube.com/embed/3j973s1a3kk&autoplay=1" frameborder="0" allowfullscreen></iframe></div><br />
+<embed src=”http://www.youtube.com/v/EBM854BTGL0&autoplay=1&rel=0″ type=”application/x-shockwave-flash” wmode=”transparent” width=”425″ height=”344″></embed>
+
+
 			  <span id="authors"><?php echo $loc->Translate("INDEX_AUTHORS"); ?></span>
 			  <br />
 			  <?php echo $loc->Translate("INDEX_DISCLAIMER"); ?>
