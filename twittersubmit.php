@@ -1,8 +1,13 @@
 <?php
+
+require_once('bingoconfig.php');
+
+global $consumerSecret;
+global $oAuthSecret;
+
 $consumerKey    = '8jp7xABzIsLQkZ07OzImA';
-$consumerSecret = '';
 $oAuthToken     = '378594590-uU9igS21ORUtPeeJiQixlKu6k3gcflOA4DSCHAxf';
-$oAuthSecret    = '';
+
 
 $username = $_POST['twitter'];
 $hashtag = $_POST['sessionhashtag'];

@@ -1,5 +1,7 @@
 <?php 
+  
   require_once "classes/Localization.inc.php";
+  require_once 'bingoconfig.php';
 
   setcookie("bingoboard", "", 1);
 
@@ -23,10 +25,10 @@
 			  <?php echo $loc->Translate("INDEX_WELCOME_MSG_1"); ?>
 			  <br /><br />
 			  <form action="twittersubmit.php" method="POST"> 
-			  <?php echo $loc->Translate("INDEX_WELCOME_MSG_2"); ?><br />
-				  <input type="text" id="twitter" name="twitter" maxlength="25" value="@twitterhandle"/>
-			   <?php echo $loc->Translate("INDEX_WELCOME_MSG_2"); ?><br />
-				  <input type="text" id="lang" name="sessionhashtag" maxlength="25" value="#ONA11">
+			  <?php echo $loc->Translate("INDEX_WELCOME_MSG_2"); ?>
+				  <input type="text" id="twitter" name="twitter" maxlength="25" value="@twitterhandle"/><br />
+			   <?php echo $loc->Translate("INDEX_WELCOME_MSG_3"); ?>
+				  <input type="text" id="lang" name="sessionhashtag" maxlength="25" value="#ONA11"><br />
 				  <input type="submit" value="<?php echo $loc->Translate("INDEX_SUBMIT_BUTTON"); ?>">
 			  </form>
 			  <span id="authors"><?php echo $loc->Translate("INDEX_AUTHORS"); ?></span>
@@ -38,4 +40,21 @@
 	  </body>
   </html>
 
-<? // ONA11BuzzwordBingo: @JeremyBMerrill just got BINGO at #ONA11 #BuzzwordBingo while at the #whateverwhatever session. You can play buzzword bingo too at ona11.journalists.org/bingo ?>
+<? 
+
+function increment_db($word){  
+  if (strlen($word) > 28){
+    $word = substr($word, 0, 28);
+  }
+  global $prepared_select;
+  global $prepared_insert;
+  $prepared_select -> bindParam(':word', $word);
+  $prepared_select -> execute();
+  $result = $prepared_select -> fetch();
+  $count = $result["count"];
+  
+  $prepared_insert -> bindParam(':word', $word);  
+  $prepared_insert -> bindParam(':count', $count);
+  $prepared_insert -> execute();  
+}
+ ?>
