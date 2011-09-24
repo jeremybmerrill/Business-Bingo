@@ -33,7 +33,7 @@
 
 	  </head>
 	  <body>
-		  <a href="https://github.com/jeremybmerrill/Business-Bingo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/github.png" alt="Fork me on GitHub"></a>
+		  <a id="github" href="https://github.com/jeremybmerrill/Business-Bingo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/github.png" alt="Fork me on GitHub"></a>
 		  <center>
         <h1>Bingo!</h1>
 			  <?php echo $loc->Translate("INDEX_WELCOME_MSG_1"); ?>

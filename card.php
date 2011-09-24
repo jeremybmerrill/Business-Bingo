@@ -1,5 +1,6 @@
 <?php  
 		include "classes/Localization.inc.php";
+		error_reporting(0);
 		$loc = new Localization($_POST['lang']);
 		if ($_POST['name'] != null) {
 			$tester = $_POST['name'];
@@ -36,7 +37,7 @@
 	</head>
 	<body>
 		<div id="blurb">
-			<img id="head" src="images/bingo.gif">
+			<img id="head" src="/images/bingo.gif">
 			<h1>#ONA11 #innovation #dataviz #socialmedia</h1>
 			<h2>produced by the <a href="http://ona11.journalists.org/student-newsroom/">ONA Student Newsroom.</a></h2>
 			<br>
@@ -45,9 +46,9 @@
 		</div>
 		
 		<div id="mobileheader">
-			<img id="head" src="/images/bingo.gif">
-			<br>
 			Buzzword Bingo is easy! Every time you hear a word on the board below in a session, click the tile! We've even given you a free tile to start.
+			<br>
+			<span style="font-size: 12px; font-family: 'Raleway', sans-serif; font-weight: 100; text-transform: uppercase;">Swipe to see the entire board &rarr;</span>
 		</div>
 		<div id="wrapper">
 			<center>
@@ -86,7 +87,7 @@
 						  if(($i % 5)==0) echo "</tr><tr>";
 						  if($i==12)
 						  {
-							  echo "<td id='a" . $i .  "' class='bingotile bingoed' align='center'><img src='images/ona11.png' width='70px' height='70px' align='center'></td>";
+							  echo "<td id='a" . $i .  "' class='bingotile' align='center'><img src='images/ona11.png' width='50px' height='50px' align='center'></td>";
 						  }else{
 	              $my_word = $bingoboard[$i];
 							  echo "<td id='a" . $i .  "' class='bingotile' align='center'>" . $my_word . "</td>";
@@ -105,5 +106,6 @@
 			</div>
 			<?php echo $loc->Translate("CARD_WELCOME_MSG_1") . "<b> " . $tester . $loc->Translate("CARD_WELCOME_MSG_2") ?>
 		</center>
+		<p>
 	</body>
 </html>

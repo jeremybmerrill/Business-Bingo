@@ -91,8 +91,10 @@ img#head {
 	position: relative;
 }
 
+table#mobileboard { display: none; }
+
 table {
-	min-width: 500px;
+	width: 500px
 	border: none;
 	border-spacing: 3px;
 	border-collapse: separate;
@@ -114,7 +116,7 @@ table td {
 }
 
 table td.bingoed {
-	background-color: #f06;
+	background-color: #ff0066;
 	color: white;
 }
 
