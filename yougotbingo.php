@@ -13,7 +13,7 @@
   ?>
   <html>
 	  <head>
-	  	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" name="viewport">
+      <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" name="viewport">
 		  <title><?php echo $loc->Translate("INDEX_PAGE_TITLE"); ?> </title>
 		  <link rel="stylesheet" type="text/css" href="styles/style.css">
 		  <script type="text/javascript">
@@ -30,6 +30,7 @@
 			    s.parentNode.insertBefore(wf, s);
 			  })();
 			</script>
+
 	  </head>
 	  <body>
 		  <a href="https://github.com/jeremybmerrill/Business-Bingo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/github.png" alt="Fork me on GitHub"></a>
