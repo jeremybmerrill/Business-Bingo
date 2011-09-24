@@ -92,7 +92,7 @@ img#head {
 }
 
 table {
-	width: 500px;
+	min-width: 500px;
 	border: none;
 	border-spacing: 3px;
 	border-collapse: separate;
@@ -114,7 +114,7 @@ table td {
 }
 
 table td.bingoed {
-	background-color: #ff0066;
+	background-color: #f06;
 	color: white;
 }
 
