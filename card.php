@@ -36,7 +36,7 @@
 	</head>
 	<body>
 		<div id="blurb">
-			<img id="head" src="/images/bingo.gif">
+			<img id="head" src="images/bingo.gif">
 			<h1>#ONA11 #innovation #dataviz #socialmedia</h1>
 			<h2>produced by the <a href="http://ona11.journalists.org/student-newsroom/">ONA Student Newsroom.</a></h2>
 			<br>
@@ -86,7 +86,7 @@
 						  if(($i % 5)==0) echo "</tr><tr>";
 						  if($i==12)
 						  {
-							  echo "<td id='a" . $i .  "' class='bingotile' align='center'><img src='images/ona11.png' width='70px' height='70px' align='center'></td>";
+							  echo "<td id='a" . $i .  "' class='bingotile bingoed' align='center'><img src='images/ona11.png' width='70px' height='70px' align='center'></td>";
 						  }else{
 	              $my_word = $bingoboard[$i];
 							  echo "<td id='a" . $i .  "' class='bingotile' align='center'>" . $my_word . "</td>";
