@@ -55,8 +55,8 @@ $INDEX_DISCLAIMER = "Journalism works best when it's jargon-free. :)";
 $INDEX_FOOTER_MSG = "Have fun!";
 
 // Card page strings
-$CARD_DEFAULT_NAME = "for all you multimedia journalists, you know who you are. ";
+$CARD_DEFAULT_NAME = "For all you multimedia journalists, you know who you are. ";
 $CARD_PAGE_TITLE = "#ONA11 Buzzword Bingo!";
-$CARD_WELCOME_MSG_1 = "Welcome, ";
+$CARD_WELCOME_MSG_1 = "";
 $CARD_WELCOME_MSG_2 = "Good luck!";
 ?>
