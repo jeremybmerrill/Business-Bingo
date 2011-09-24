@@ -18,7 +18,7 @@ require_once('twitteroauth/twitteroauth.php');
 $tweet = new TwitterOAuth($consumerKey, $consumerSecret, $oAuthToken, $oAuthSecret);
 
 //send a tweet
-$status = $username . ' just got BINGO at #ONA11 #BuzzwordBingo while at ' . $hashtag . '. You can play buzzword bingo too at ona11.journalists.org/bingo';
+$status = $username . ' just got BINGO at #ONA11 #BuzzwordBingo while at ' . $hashtag . '. Play along at http://ona11.journalists.org/bingo';
 $tweet->post('statuses/update', array('status' => $status));
 
 header('Location: http://twitter.com');
