@@ -1,16 +1,7 @@
 * {	border, margin, padding: 0; }
 
-#mobileheader, #mobilefooter { display: none; }
-
-body {
-	background: #e6e3dc;
-	margin: 10px;
-  color: black;
-  font-size: 10px;
-  font-family: "Nobile", sans-serif;
-  font-weight: 400;
-	line-height: 18px;
-  text-align: center;
+#mobilefooter {
+	margin-bottom: 10px;
 }
 
 h1 {
@@ -35,27 +26,27 @@ h2 {
 }
 
 h2 a {
-	font: 20px "Raleway", sans-serif;
-	font-weight: 100;
   text-decoration: none;
   color: #222;
   border-bottom: 1px dotted #09f;
 }
 
-h2 a:hover {
-	font: 20px "Raleway", sans-serif;
-	font-weight: 100;
-  text-decoration: none;
-  color: #222;
-  border-bottom: 1px dotted #09f;
-  background: none;
+body {
+	background: #e6e3dc;
+	margin: 10px;
+  color: black;
+  font-size: 10px;
+  font-family: "Nobile", sans-serif;
+  font-weight: 400;
+	line-height: 18px;
+  text-align: center;
 }
 
 a { 
 	border-bottom: 1px dotted #1AA7DF;
 	text-decoration: none;
 	color: #1AA7DF;
-  font-size: 1em;
+  font-size: 10px;
   font-family: "Nobile", sans-serif;
   font-weight: 400;
   list-style-type: none;
@@ -67,7 +58,7 @@ a:hover {
 	text-decoration: none;
 	border-bottom: 1px dotted #1AA7DF;
 	color: black;
-  font-size: 1em;
+  font-size: 10px;
   font-family: "Nobile", sans-serif;
   font-weight: 400;
   list-style-type: none;
@@ -77,22 +68,22 @@ a:hover {
 	background-color: #FAEBD7
 }
 
+img#head { max-width: 100px; }
+
+#blurb { display: none; }
+
 img {  
 	border-style: none;
 }
 
-img#head {
-	max-width: 150px;
-}
-
-#blurb {
-	width: 100%;
-	display: inline;
-	position: relative;
+#wrapper {
+	width: 200px;
+	text-align: center;
 }
 
 table {
-	width: 500px;
+	font-size: 9px;
+	width: 320px;
 	border: none;
 	border-spacing: 3px;
 	border-collapse: separate;
@@ -102,7 +93,7 @@ table {
 table th {
 	border: 1px dotted black;
 	background-color: white;
-	-moz-border-radius: 0px;
+	-moz-border-radius: 0px 0px 0px 0px;
 }
 
 table td {
@@ -110,7 +101,7 @@ table td {
 	padding-right: 5px;
 	padding-left: 5px;
 	background-color: white;
-	-moz-border-radius: 0px;
+	-moz-border-radius: 0px 0px 0px 0px;
 }
 
 table td.bingoed {
@@ -119,6 +110,6 @@ table td.bingoed {
 }
 
 .bingotile {
-  width: 120px;
-  height: 120px;
+  width: 64px;
+  height: 64px;
 }
