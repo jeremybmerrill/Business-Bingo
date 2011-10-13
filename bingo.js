@@ -1,83 +1,37 @@
 $(document).ready(function() {
-  $('#a1').click(function(){
-    $('#a1').toggleClass("bingoed");
-    hazBingo();
+  $('.bingotile').each(function(index){
+    $(this).click(function(){$(this).toggleClass('bingoed'); hazBingo();})
   });
-  $('#a2').click(function(){
-    $('#a2').toggleClass("bingoed");
-    hazBingo();
-  });
-  $('#a3').click(function(){
-    $('#a3').toggleClass("bingoed");
-    hazBingo();
-  });
-  $('#a4').click(function(){$('#a4').toggleClass('bingoed'); hazBingo();});
-  $('#a5').click(function(){$('#a5').toggleClass('bingoed'); hazBingo();});
-  $('#a6').click(function(){$('#a6').toggleClass('bingoed'); hazBingo();});
-  $('#a7').click(function(){$('#a7').toggleClass('bingoed'); hazBingo();});
-  $('#a8').click(function(){$('#a8').toggleClass('bingoed'); hazBingo();});
-  $('#a9').click(function(){$('#a9').toggleClass('bingoed'); hazBingo();});
-  $('#a10').click(function(){$('#a10').toggleClass('bingoed'); hazBingo();});
-  $('#a11').click(function(){$('#a11').toggleClass('bingoed'); hazBingo();});
-  $('#a12').click(function(){$('#a12').toggleClass('bingoed'); hazBingo();});
-  $('#a13').click(function(){$('#a13').toggleClass('bingoed'); hazBingo();});
-  $('#a14').click(function(){$('#a14').toggleClass('bingoed'); hazBingo();});
-  $('#a15').click(function(){$('#a15').toggleClass('bingoed'); hazBingo();});
-  $('#a16').click(function(){$('#a16').toggleClass('bingoed'); hazBingo();});
-  $('#a17').click(function(){$('#a17').toggleClass('bingoed'); hazBingo();});
-  $('#a18').click(function(){$('#a18').toggleClass('bingoed'); hazBingo();});
-  $('#a19').click(function(){$('#a19').toggleClass('bingoed'); hazBingo();});
-  $('#a20').click(function(){$('#a20').toggleClass('bingoed'); hazBingo();});
-  $('#a21').click(function(){$('#a21').toggleClass('bingoed'); hazBingo();});
-  $('#a22').click(function(){$('#a22').toggleClass('bingoed'); hazBingo();});
-  $('#a23').click(function(){$('#a23').toggleClass('bingoed'); hazBingo();});
-  $('#a24').click(function(){$('#a24').toggleClass('bingoed'); hazBingo();});
-  $('#a25').click(function(){$('#a25').toggleClass('bingoed'); hazBingo();});
-  $('#a26').click(function(){$('#a26').toggleClass('bingoed'); hazBingo();});
-  $('#a27').click(function(){$('#a27').toggleClass('bingoed'); hazBingo();});
-  $('#a28').click(function(){$('#a28').toggleClass('bingoed'); hazBingo();});
-  $('#a29').click(function(){$('#a29').toggleClass('bingoed'); hazBingo();});
-  $('#a0').click(function(){$('#a0').toggleClass('bingoed'); hazBingo();});
 
+  jQuery.fn.compare = function(t) { /*via http://stackoverflow.com/questions/1773069/using-jquery-to-compare-two-arrays */
+      if (this.length != t.length) { return false; }
+      var a = this.sort(),
+          b = t.sort();
+      for (var i = 0; t[i]; i++) {
+          if (a[i] !== b[i]) { 
+                  return false;
+          }
+      }
+      return true;
+  };
 
-  /* if you get bingo */
   function hazBingo(){
-    if ( $('#a0').hasClass('bingoed') && $('#a1').hasClass('bingoed') && $('#a2').hasClass('bingoed') && $('#a3').hasClass('bingoed') && $('#a4').hasClass('bingoed') ){
-      window.location = "yougotbingo.php" + getifyWords();
+    if ( $('.bingoed.row1').compare($('.row1')) || $('.bingoed.row2').compare($('.row2')) || $('.bingoed.row3').compare($('.row3')) || $('.bingoed.row4').compare($('.row4')) || $('.bingoed.row0').compare($('.row0')) ){
+      goToNext();
     }
-    if ($('#a5').hasClass('bingoed') && $('#a6').hasClass('bingoed') && $('#a7').hasClass('bingoed') && $('#a8').hasClass('bingoed') && $('#a9').hasClass('bingoed')){
-      window.location = "yougotbingo.php" + getifyWords();
+    if ($('.bingoed.col1').compare($('.col1')) || $('.bingoed.col2').compare($('.col2')) || $('.bingoed.col3').compare($('.col3')) || $('.bingoed.col4').compare($('.col4')) || $('.bingoed.col0').compare($('.col0')) ){
+      goToNext();
     }
-    if ($('#a10').hasClass('bingoed') && $('#a11').hasClass('bingoed') && $('#a12').hasClass('bingoed') && $('#a13').hasClass('bingoed') && $('#a14').hasClass('bingoed')){
-      window.location = "yougotbingo.php" + getifyWords();
+    if ($('#tile0').hasClass('bingoed') && $('#tile6').hasClass('bingoed') && $('#tile12').hasClass('bingoed') && $('#tile18').hasClass('bingoed') && $('#tile24').hasClass('bingoed')){ //diagonal
+      goToNext();
     }
-    if ($('#a15').hasClass('bingoed') && $('#a16').hasClass('bingoed') && $('#a17').hasClass('bingoed') && $('#a18').hasClass('bingoed') && $('#a19').hasClass('bingoed')){
-      window.location = "yougotbingo.php" + getifyWords();
+    if ($('#tile4').hasClass('bingoed') && $('#tile8').hasClass('bingoed') && $('#tile12').hasClass('bingoed') && $('#tile16').hasClass('bingoed') && $('#tile20').hasClass('bingoed')){ //diagonal
+      goToNext();
     }
-    if ($('#a20').hasClass('bingoed') && $('#a21').hasClass('bingoed') && $('#a22').hasClass('bingoed') && $('#230').hasClass('bingoed') && $('#a24').hasClass('bingoed')){
+  }
+
+  function goToNext(){
       window.location = "yougotbingo.php" + getifyWords();
-    }
-    if ($('#a0').hasClass('bingoed') && $('#a5').hasClass('bingoed') && $('#a10').hasClass('bingoed') && $('#a15').hasClass('bingoed') && $('#a20').hasClass('bingoed')){
-      window.location = "yougotbingo.php" + getifyWords();
-    }
-    if ($('#a1').hasClass('bingoed') && $('#a6').hasClass('bingoed') && $('#a11').hasClass('bingoed') && $('#a16').hasClass('bingoed') && $('#a21').hasClass('bingoed')){
-      window.location = "yougotbingo.php" + getifyWords();
-    }
-    if ($('#a2').hasClass('bingoed') && $('#a7').hasClass('bingoed') && $('#a12').hasClass('bingoed') && $('#a17').hasClass('bingoed') && $('#a22').hasClass('bingoed')){
-      window.location = "yougotbingo.php" + getifyWords();
-    }
-    if ($('#a3').hasClass('bingoed') && $('#a8').hasClass('bingoed') && $('#a13').hasClass('bingoed') && $('#a18').hasClass('bingoed') && $('#a22').hasClass('bingoed')){
-      window.location = "yougotbingo.php" + getifyWords();
-    }
-    if ($('#a4').hasClass('bingoed') && $('#a9').hasClass('bingoed') && $('#a14').hasClass('bingoed') && $('#a19').hasClass('bingoed') && $('#a23').hasClass('bingoed')){
-      window.location = "yougotbingo.php" + getifyWords();
-    }
-    if ($('#a0').hasClass('bingoed') && $('#a6').hasClass('bingoed') && $('#a12').hasClass('bingoed') && $('#a18').hasClass('bingoed') && $('#a24').hasClass('bingoed')){
-      window.location = "yougotbingo.php" + getifyWords();
-    }
-    if ($('#a4').hasClass('bingoed') && $('#a8').hasClass('bingoed') && $('#a12').hasClass('bingoed') && $('#a16').hasClass('bingoed') && $('#a20').hasClass('bingoed')){
-      window.location = "yougotbingo.php" + getifyWords();
-    }
   }
 
   function getifyWords(){
