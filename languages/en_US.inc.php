@@ -43,6 +43,10 @@ $WORDS_ARRAY = array(
 
 // Front page strings
 $INDEX_PAGE_TITLE = "#ONA11 Buzzword Bingo!";
+$INDEX_PAGE_HEADER = "#ONA11 #innovation #dataviz #socialmedia";
+$INDEX_PAGE_DIRECTIONS_DESKTOP = "Buzzword Bingo is easy! Every time you hear a word on the board below in a session, click the tile! We've even given you a free tile to start.";
+$INDEX_PAGE_DIRECTIONS_MOBILE = "Buzzword Bingo is easy! Every time you hear a word on the board below in a session, click the tile! We've even given you a free tile to start.";
+$INDEX_PAGE_PRODUCED_BY = 'produced by the <a href="http://ona11.journalists.org/student-newsroom/">ONA Student Newsroom.</a>';
 $INDEX_WELCOME_MSG_1 = "Thanks for playing the first annual ONA Bingo -- developed exclusively for journalists who see through the BS!";
 
 $INDEX_WELCOME_MSG_2 = "Twitter handle:";

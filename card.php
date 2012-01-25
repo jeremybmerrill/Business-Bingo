@@ -1,6 +1,6 @@
 <?php  
 		include "classes/Localization.inc.php";
-		error_reporting(0);
+		error_reporting(5);
 		$loc = new Localization($_POST['lang']);
 		if ($_POST['name'] != null) {
 			$tester = $_POST['name'];
@@ -38,15 +38,14 @@
 	<body>
 		<div id="blurb">
 			<img id="head" src="/images/bingo.gif">
-			<h1>#ONA11 #innovation #dataviz #socialmedia</h1>
-			<h2>produced by the <a href="http://ona11.journalists.org/student-newsroom/">ONA Student Newsroom.</a></h2>
+			<h1><?php echo $loc->Translate("INDEX_PAGE_HEADER"); ?></h1>
+	        <h2><?php echo $loc->Translate("INDEX_PAGE_PRODUCED_BY"); ?></h2>
 			<br>
-			
-			Buzzword Bingo is easy! Every time you hear a word on the board below in a session, click the tile! We've even given you a free tile to start.
+            <?php echo $loc->Translate("INDEX_PAGE_DIRECTIONS_DESKTOP"); ?>
 		</div>
 		
 		<div id="mobileheader">
-			Buzzword Bingo is easy! Every time you hear a word on the board below in a session, click the tile! We've even given you a free tile to start.
+			<?php echo $loc->Translate("INDEX_PAGE_DIRECTIONS_MOBILE"); ?>
 			<br>
 			<span style="font-size: 12px; font-family: 'Raleway', sans-serif; font-weight: 100; text-transform: uppercase;">Swipe to see the entire board &rarr;</span>
 		</div>
@@ -102,7 +101,7 @@
 		<center>
 			<br>
 			<div id="mobilefooter">
-				<h2>produced by the <a href="http://ona11.journalists.org/student-newsroom/">ONA Student Newsroom.</a></h2>
+				<h2><?php echo $loc->Translate("INDEX_PAGE_PRODUCED_BY"); ?></h2>
 			</div>
 			<?php echo $loc->Translate("CARD_WELCOME_MSG_1") . "<b> " . $tester . $loc->Translate("CARD_WELCOME_MSG_2") ?>
 		</center>
