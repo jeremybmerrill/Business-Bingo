@@ -65,11 +65,11 @@
 						  if(($i % 5)==0) echo "</tr><tr>";
 						  if($i==12)
 						  {
-							  echo "<td id='a" . $i .  "' class='row3 col3 bingotile' align='center'><img src='images/ona11.png' width='70px' height='70px' align='center'></td>";
+							  echo "<td id='tile" . $i .  "' class='row3 col3 bingotile' align='center'><img src='images/ona11.png' width='70px' height='70px' align='center'></td>";
 	              $bingoboard[] = "";
 						  }else{
 	              $my_word = $words[$random[$i]];
-							  echo "<td id='a" . $i .  "' class=' row" . (int) ($i / 5 ) . " col" . ($i % 5) . " bingotile' align='center'>" . $my_word . "</td>";
+							  echo "<td id='tile" . $i .  "' class=' row" . (int) ($i / 5 ) . " col" . ($i % 5) . " bingotile' align='center'>" . $my_word . "</td>";
 	              $bingoboard[] = $my_word;
 						  }
 					  }
