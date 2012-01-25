@@ -1,6 +1,6 @@
 <?php  
 		include "classes/Localization.inc.php";
-		error_reporting(5);
+		error_reporting(0);
 		$loc = new Localization($_POST['lang']);
 		if ($_POST['name'] != null) {
 			$tester = $_POST['name'];
